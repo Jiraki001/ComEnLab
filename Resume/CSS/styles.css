@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* body */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #001F3F;
+}
+
+/* common styles */
+h1 {
+  color: rgb(250, 250, 250);
+}
+
+p {
+  color: rgb(0, 0, 0);
+}
+
+.description {
+  margin-top: 1rem;
+  margin-left: 2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: black;
+}
+
+.title {
+  color: #3A6D8C;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.item-pretitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.item-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+  margin-left: 2rem;
+}
+
+.item-subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+  margin-left: 2rem;
+}
+
+/* layout */
+.container {
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+  padding: 3rem;
+  background-color: #e9e4da;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+}
+
+.profile {
+  grid-column: 1 / -1;
+}
+
+.group-1 {
+  background-color: #a0a0a050;
+  display: flex;
+  flex-direction: column;
+  padding-right: 2rem;
+  border-radius: 10px;
+}
+.group-2 {
+  background-color: #a0a0a050;
+  padding-top: 1rem;
+  padding-left: 3rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  border-radius: 10px;
+}
+
+.group-3 {
+  grid-column: 1 / -1;
+}
+
+@media only screen and (max-width: 950px) {
+  .container {
+    width: 80%;
+    grid-template-columns: 1fr;
+    margin-right: 2rem;
+    padding: 3rem;
+    gap: 7rem;
+  }
+}
+
+/* profile */
+.profile-container {
+  display: flex;
+  gap: 4rem;
+  background-color: #a0a0a050;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.profile-image img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  max-width: 300px;
+  min-width: 250px;
+}
+
+/* Adjusted profile name styles */
+.profile-name-firstname {
+  color: rgb(10, 6, 6);
+  font-weight: 200;
+  font-size: clamp(2rem, 4vw, 3rem); /* Responsive font size */
+  text-transform: uppercase;
+  display: block;
+}
+
+.profile-name-lastname {
+  color: #3A6D8C;
+  font-weight: 400;
+  font-size: clamp(2rem, 5vw, 5rem); /* Responsive font size */
+  text-transform: uppercase;
+}
+
+.job-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-left: 1rem;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 950px) {
+  .profile-image img {
+    max-width: 250px; 
+    min-width: 200px;
+  }
+  
+  .profile-container {
+    flex-direction: column; /* Stack profile info */
+    justify-self: center;
+  }
+  .group-1{
+    padding-bottom: 2rem;
+  }
+  .group-2{
+    padding-bottom: 2rem;
+  }
+}
+
+.contact-list {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  line-height: 1.5;
+}
+
+
+.contact-item{
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skill {
+  margin-top: 1rem;
+  margin-left: 1rem; 
+  line-height: 1.8;
+  font-size: 1.4rem;
+}
+
+.interest {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  line-height: 1.5;
+}
+
+.interest-item {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  font-size: 1.4rem !important;
+  display: flex;
+  gap: 0.5rem;
+  color: black;
+}
+
+/* Button styling */
+.download-btn {
+  background-color: #fbeee0;
+  border: 2px solid #001F3F;
+  border-radius: 10px;
+  box-shadow: #001F3F 4px 4px 0 0;
+  color: #001F3F;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0 18px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.download-btn:hover {
+  background-color: #fff;
+}
+
+.download-btn:active {
+  box-shadow: #000c429a 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .btn-container {
+    justify-content: center;
+  }
+}
